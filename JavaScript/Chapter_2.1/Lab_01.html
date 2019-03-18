@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lab 01</title>
+    <!--This script works with variables
+    auteur:
+    date:
+    -->
+  </head>
+  <body>
+    <h2>Lab 01</h2>
+    <h3>Invoice</h3>
+  <script type="text/javascript">
+  // Variables
+    var CustomerName = prompt("Enter your name, please?");
+    var Amount = parseInt(prompt("Amount of books you would like to order"));
+    var Title = "Javascript";
+    var Price = 29.90;
+    var PriceExTax = Price * Amount;
+    var Tax = PriceExTax * 0.06;
+    var TotalPrice = PriceExTax + Tax;
+
+  // Code
+    document.write("<br>Thank you for your order: " + CustomerName);
+    document.write("<br>Title is: " + Title);
+    document.write("<br>The amount of books you have ordered is: " + Amount);
+    document.write("<br>Price per book is: " + Price.toFixed(2));
+    document.write("<br>Price before taxes is: " + PriceExTax);
+    document.write("<br>The amount of taxes is: " + Tax.toFixed(2));
+    document.write("<br>Total price including taxes is: " + TotalPrice.toFixed(2));
+  </script>
+  </body>
+</html>
