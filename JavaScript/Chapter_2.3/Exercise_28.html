@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Declaring the variables
+      var Students = new Array("Zakaria","Albert", "Hamsa", "Mike", "Peter");
+      Team = Students;
+      Team[0] = "Umut";
+
+      //Coding the printing
+      document.write("All the Students are: " + Students);
+      Students.shift();
+      document.write("<br>Exercise 27 showed: The result of shift() is: " + Students);
+      Students.unshift("Jozef","Umut");
+      document.write("<br>Exercise 28: The result of unshift() is: " + Students);
+    </script>
+  </body>
+</html>
