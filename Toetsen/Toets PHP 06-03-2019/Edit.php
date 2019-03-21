@@ -26,7 +26,7 @@
         <input type="text" name="VOORNAAM" required value=<?= $row['VOORNAAM']; ?>> <br>
         Last Name: <br>
         <input type="text" name="ACHTERNAAM" required value=<?= $row['ACHTERNAAM']; ?>> <br>
-        <input type="submit" value="Uptdate">
+        <input type="submit" value="Update">
       </form>
     </div>
   </body>
