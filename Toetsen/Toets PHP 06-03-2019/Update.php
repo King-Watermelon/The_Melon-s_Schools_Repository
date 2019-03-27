@@ -24,8 +24,8 @@
         $Number = $_GET["NR"];
 
         //Setting the SQL question
-        $query = "UPDATE acteurs SET VOORNAAM = '$new_First_Name', ACHTERNAAM = '$new_Last_Name' WHERE NR = '$Number'";
-        $result = mysqli_query($conn, $query);
+        $stmt = $pdo->query("UPDATE acteurs SET VOORNAAM = '$new_First_Name', ACHTERNAAM = '$new_Last_Name' WHERE NR = '$Number'");
+        $result = $stmt->fetch();
       } else {
         echo "NR was not set.";
       }

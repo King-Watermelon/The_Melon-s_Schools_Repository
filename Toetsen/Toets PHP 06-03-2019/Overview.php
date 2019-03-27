@@ -9,10 +9,6 @@
     <?php
       //Make the connection with the database
       include 'Connect.php';
-
-      //Setting the SQL question
-      $query = "SELECT NR, VOORNAAM, ACHTERNAAM FROM acteurs ORDER BY NR";
-      $result = mysqli_query($conn, $query);
     ?>
 
     <!--Creating the table -->
@@ -24,9 +20,11 @@
         <th>Edit</th>
         <th>Delete</th>
       </tr>
+
       <?php
-        //Create the while loop to fill the table
-        while ($row = mysqli_fetch_array($result)) {
+        //Set the query and start a while loop to print it all in the table
+        $stmt = $pdo->query("SELECT NR, VOORNAAM, ACHTERNAAM FROM acteurs ORDER BY NR");
+        while ($row = $stmt->fetch()) {
           echo "<tr>";
           echo "<td>" . $row["NR"] . "</td>";
           echo "<td>" . $row["VOORNAAM"] . "</td>";
@@ -36,11 +34,8 @@
           echo "</tr>";
         }
 
-        //Empty the variable $result
-        mysqli_free_result($result);
-
         //Close the connection with the database
-        mysqli_close($conn);
+        $conn = null;
       ?>
     </table>
   </body>

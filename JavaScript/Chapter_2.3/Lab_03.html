@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Declaring the variables
+      var TestArray = new Array("one", "two", 3, "four");
+
+      //Code for points 1 thru 4
+      TestArray.push(5);
+      document.write(TestArray);
+      document.write("<br>The datatype of the 5th element of TestArray is: " + typeof TestArray[4]);
+
+      //Code for points 5 thru
+      TestArray.splice(4,1);
+      document.write("<br>When you delete the 5th element: " + TestArray);
+      TestArray.unshift("nul");
+      document.write("<br>After you added a element in the front: " + TestArray);
+      TestArray.splice(0,1);
+      document.write("<br>The datatype of the first element of TestArray is: " + typeof TestArray[0]);
+      document.write("<br>" + TestArray);
+      TestArray.splice(1,1);
+      document.write("<br> " + TestArray);
+      TestArray.splice(2,1);
+      document.write("<br> " + TestArray);
+
+    </script>
+  </body>
+</html>

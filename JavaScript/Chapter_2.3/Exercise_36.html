@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Declaring the variables
+      var Students = new Array("Umut","Albert", "Hamsa", "Mike", "Peter", "Bob", "John");
+
+      //Coding the printing
+      document.write("All the Students are: " + Students);
+      InClass = Students.splice(2,4);
+      document.write("<br>Exercise 31 showed: The result of Splice(2,4) is: " + Students + "<br>The rest of the class is: " + InClass);
+      delete InClass[2];
+      document.write("<br>Exercise 36: The datatype of a shared element is: " + typeof InClass[2]);
+    </script>
+  </body>
+</html>
